@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LogicScript : MonoBehaviour
-{
+public class LogicScript : MonoBehaviour {
     public int playerScore;
     public Text scoreText;
 
@@ -12,5 +11,10 @@ public class LogicScript : MonoBehaviour
     {
         playerScore++;
         scoreText.text = playerScore.ToString();
+    }
+
+    public void GameOver()
+    {
+        scoreText.text = "Game Over!";
     }
 }

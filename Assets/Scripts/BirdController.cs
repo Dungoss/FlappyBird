@@ -28,5 +28,6 @@ public class BirdController : MonoBehaviour
     {
         birdAlive = false;
         logic.GameOver();
+        ///logic game over
     }
 }

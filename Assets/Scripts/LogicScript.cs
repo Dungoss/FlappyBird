@@ -10,19 +10,14 @@ public class LogicScript : MonoBehaviour {
     [SerializeField] GameObject gameOverScene;
     public bool canAddScore = true;
 
-    public AudioClip audioClip; // Declare it as AudioClip, not AudioSource
-
+    public AudioClip audioClip;
     private AudioSource audioSource;
 
     void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
 
-        // Assign the AudioClip to the AudioSource
         audioSource.clip = audioClip;
-
-        // Play the audio
-
     }
 
 
@@ -30,9 +25,10 @@ public class LogicScript : MonoBehaviour {
     {
         if(canAddScore)
         {
+            audioSource.Play();
             playerScore += scoreToAdd;
             scoreText.text = playerScore.ToString();
-            audioSource.Play();
+            
         }
     }
 

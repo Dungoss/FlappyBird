@@ -44,4 +44,5 @@ public class LogicScript : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
     }
+
 }
